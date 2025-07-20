@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
+import Headers from './Header/Header.jsx'
+import Exp from './Components/Exp.jsx'
 import './index.css'
-import Poster from './assets/Components/Poster.jsx' 
-import Profile from './assets/Components/Profile.jsx'
-import Users from './assets/Components/Users.jsx'
+import Footer from './Header/Footer.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <h1 className="bg-red-500 ">Vite + React</h1>
-      <Poster />
-      <Profile />
-      <Users />
-
+      <Headers />
+      <Exp />
+      <Footer />
     </>
   )
 }
