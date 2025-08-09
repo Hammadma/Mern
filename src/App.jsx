@@ -15,14 +15,21 @@ import Post from './Components/Post.jsx'
 import Profile from './Components/Profile.jsx'
 import Profiles from './Components/Profiles.jsx'
 import Register from './Components/Register.jsx'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className="bg-red-500 ">Vite + React</h1>
-      <Headers /> 
-      < EditProfile />
+      <Router>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        {/* Add other routes here */}
+      </Routes>
+    </Router>
+      {/* < EditProfile />
       <CreateProfile />
       < PostFeed />
      < Dashboard />
@@ -30,13 +37,15 @@ function App() {
       < Post />
       <Register />
       < Profiles /> 
-       < Profile />
+      
+       < Profile /> */}
+        {/* <MainHeader />
        < Landing /> 
-     <MainHeader />
-     <Exp /> 
+     <Footer /> */}
+     {/* <Exp /> 
        <AddExperience />
-      <CreateProfile />
-      <Footer />
+      <CreateProfile /> */}
+      
     </>
   )
 }

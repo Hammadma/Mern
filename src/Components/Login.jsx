@@ -1,8 +1,12 @@
 import React from 'react';
+import './Login.jsx'; // Assuming you have a CSS file for styling
+import Footer from '../Header/Footer.jsx';
 
 const Login = () => {
   return (
-    <div className="login py-16">
+    <>
+   < MainHeader />
+        <div className="login py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto">
           <h1 className="text-4xl font-bold text-center mb-4">Log In</h1>
@@ -35,6 +39,8 @@ const Login = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

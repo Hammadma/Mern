@@ -1,13 +1,27 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import MainHeader from '../Header/MainHeader';
+import Footer from '../Header/Footer';
 
 const Register = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Here you would normally handle registration logic (API call)
+    // After successful registration, redirect to login page:
+    navigate('/login');
+  };
+
   return (
+    <>
+    <MainHeader />
     <div className="py-12 bg-gray-100 min-h-screen">
       <div className="max-w-2xl mx-auto bg-white p-8 rounded shadow">
         <h1 className="text-4xl font-bold text-center mb-4 text-gray-800">Sign Up</h1>
         <p className="text-center text-gray-600 mb-6">Create your DevConnector account</p>
 
-        <form action="create-profile.html">
+        <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <input
               type="text"
@@ -56,6 +70,9 @@ const Register = () => {
         </form>
       </div>
     </div>
+    <Footer />
+    </>
+    
   );
 };
 
